@@ -66,7 +66,11 @@ namespace STX.REST.RESTFulSense.Clients.Services.Foundations.HttpExchanges
             HttpVersionPolicy defaultHttpVersionPolicy =
                 HttpVersionPolicy.RequestVersionOrLower;
 
-            await ValidateHttpExchangeRequestNotNullAsync(httpExchange.Request);
+            await ValidateHttpExchangeRequestAsync(
+                httpExchangeRequest: httpExchange.Request,
+                httpMethod: defaultHttpMethod,
+                httpVersion: defaultHttpVersion,
+                httpVersionPolicy: defaultHttpVersionPolicy);
 
             HttpRequestMessage httpRequestMessage =
                  MapToHttpRequest(
