@@ -57,7 +57,8 @@ namespace STX.REST.RESTFulSense.Clients.Services.Foundations.HttpExchanges
 
         public ValueTask<HttpExchange> PostAsync(
             HttpExchange httpExchange,
-            CancellationToken cancellationToken = default) => TryCatch(async () =>
+            CancellationToken cancellationToken = default) =>
+            TryCatch(async () =>
         {
             HttpMethod defaultHttpMethod = HttpMethod.Post;
             Version defaultHttpVersion = HttpVersion.Version11;

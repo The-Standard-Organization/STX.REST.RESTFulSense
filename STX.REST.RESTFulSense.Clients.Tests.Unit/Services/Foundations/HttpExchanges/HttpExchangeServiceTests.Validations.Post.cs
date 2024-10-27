@@ -38,7 +38,7 @@ namespace STX.REST.RESTFulSense.Clients.Tests.Unit.Services.Foundations.HttpExch
                 await Assert.ThrowsAsync<HttpExchangeValidationException>(
                     getAsyncTask.AsTask);
 
-            //then
+            // then
             actualHttpExchangeValidationException.Should().BeEquivalentTo(
                 expectedHttpExchangeValidationException);
 
