@@ -89,7 +89,7 @@ namespace STX.REST.RESTFulSense.Clients.Tests.Unit.Services.Foundations.HttpExch
             int invalidHttpVersionPolicy)
         {
             // given
-            var httpExchange = new HttpExchange()
+            var httpExchange = new HttpExchange
             {
                 Request = new HttpExchangeRequest
                 {
